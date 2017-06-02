@@ -40,7 +40,7 @@ void init(int argc, char **argv) {
     D_cache_asso = 1;
     ICh = ICm = DCh = DCm = ITLBh = ITLBm = DTLBh = DTLBm = IPTh = IPTm = DPTh = DPTm = 0;
     idisk = ddisk = icache = dcache = itlb = dtlb = 0;
-/*
+
     switch(argc) {
         case 11: D_cache_asso = atoi(argv[10]);
         case 10: D_cache_bsize = atoi(argv[9]);
@@ -54,7 +54,7 @@ void init(int argc, char **argv) {
         case 2: I_mem_size = atoi(argv[1]);
         default: break;
     }
-*/
+
     // cache
     I_cache_index = I_cache_tsize/I_cache_bsize/I_cache_asso;
     D_cache_index = D_cache_tsize/D_cache_bsize/D_cache_asso;

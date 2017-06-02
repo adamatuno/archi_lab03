@@ -1,0 +1,53 @@
+1, lb   : Disk  ;  Disk 
+2, lb   : ITLB  ;  DCache  DTLB 
+3, lb   : Disk  ;  DTLB 
+4, lb   : ITLB  ;  DCache  DTLB 
+5, lb   : Disk  ;  DCache  DTLB 
+6, lb   : ITLB  ;  DCache  DTLB 
+7, lb   : Disk  ;  DCache  DTLB 
+8, lb   : ITLB  ;  Disk 
+9, lb   : Disk  ;  DTLB 
+10, lb   : ITLB  ;  DTLB 
+11, lb   : Disk  ;  DCache  DTLB 
+12, lb   : ITLB  ;  DTLB 
+13, lb   : Disk  ;  DCache  DTLB 
+14, lb   : ITLB  ;  DTLB 
+15, lb   : Disk  ;  DTLB 
+16, lb   : ITLB  ;  DTLB 
+17, lb   : Disk  ;  DCache  DTLB 
+18, lb   : ITLB  ;  DCache  DTLB 
+19, lbu  : Disk  ;  DTLB 
+20, lbu  : ITLB  ;  DTLB 
+21, lbu  : Disk  ;  DCache  DTLB 
+22, lbu  : ITLB  ;  DCache  DTLB 
+23, lbu  : Disk  ;  DCache  DTLB 
+24, lbu  : ITLB  ;  DTLB 
+25, lbu  : Disk  ;  DTLB 
+26, lbu  : ITLB  ;  DTLB 
+27, lbu  : Disk  ;  DCache  DTLB 
+28, lbu  : ITLB  ;  DTLB 
+29, lbu  : Disk  ;  DTLB 
+30, lb   : ITLB  ;  DTLB 
+31, lb   : Disk  ;  DCache  DTLB 
+32, lb   : ITLB  ;  DCache  DTLB 
+33, lb   : Disk  ;  DTLB 
+34, lb   : ITLB  ;  DCache  DTLB 
+35, lb   : Disk  ;  DCache  DTLB 
+36, lb   : ITLB  ;  DCache  DTLB 
+37, sb   : Disk  ;  DCache  DTLB 
+38, sb   : ITLB  ;  DCache  DTLB 
+39, sb   : Disk  ;  DCache  DTLB 
+40, sb   : ITLB  ;  DCache  DTLB 
+41, sb   : Disk  ;  DCache  DTLB 
+42, sb   : ITLB  ;  DCache  DTLB 
+43, sb   : Disk  ;  DCache  DTLB 
+44, sb   : ITLB  ;  DCache  DTLB 
+45, sb   : Disk  ;  DCache  DTLB 
+46, sb   : ITLB  ;  DCache  DTLB 
+47, sb   : Disk  ;  DCache  DTLB 
+48, addi : ITLB  ; 
+49, addi : Disk  ; 
+50, beq  : ITLB  ; 
+51, sb   : Disk  ;  DCache  DTLB 
+52, sb   : ITLB  ;  DCache  DTLB 
+53, halt : Disk  ; 

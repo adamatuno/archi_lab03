@@ -6,6 +6,9 @@ int r[32], rl[32], Cycle, err_overwrite_HiLo;
 unsigned int Hi, Hil, Lo, Lol, PC, PCin, D[1024], I[256], iin, din, halt, spin;
 FILE *ii, *di, *sn, *tr, *re;
 
+unsigned int readfile(FILE *f);
+void init(int argc, char **argv);
+
 unsigned int get_op(unsigned int i);
 unsigned int get_rs(unsigned int i);
 unsigned int get_rt(unsigned int i);
@@ -33,9 +36,8 @@ void setTLB(int a, int b, int value, int ID);
 void setPT(int a, int b, int value, int ID) ;
 void setCache(int a, int b, int c, int value, int ID);
 void updateTLB(int ID, int VPN, int PPN);
-int getPA(int VA, int ID);
 void updateMRU(int index, int set, int ID);
-void goCache(int PA, int ID);
+void goCMP(int VA, int ID);
 void printfMIPS(unsigned int code);
 int idisk, ddisk, icache, dcache, itlb, dtlb, ipt, dpt;
 // parameter

@@ -51,7 +51,7 @@ int searchTLB(int VPN, int TLB_size, int page_size, int offset, int ID) {
     int i, j;
     for (i = 0; i < TLB_size; ++i) { //search in TLB
         if (TLB(i, 0, ID) && TLB(i, 1, ID) == VPN) {
-            setTLB(i, 0, Cycle, ID);
+            setTLB(i, 3, Cycle, ID);
             if (ID) {ITLBh++; itlb = 1;} else {DTLBh++; dtlb = 1;}
             return TLB(i, 2, ID) * page_size + offset;
         }
@@ -74,12 +74,13 @@ void updateMRU(int index, int set, int ID) {
     if (asso != 1) {
         mru_num = (ID) ? I_mru_num[index] : D_mru_num[index];
         cv_num = (ID) ? I_cv_num[index] : D_cv_num[index];
-        if (mru_num == asso - 1 && cv_num == asso) {
+        if (!Cache(index, set, 2, ID)) mru_num++;
+        if (mru_num == asso && cv_num == asso) {
             for (i = 0; i < asso; ++i) setCache(index, i, 2, 0, ID);
             if (ID) I_mru_num[index] = 0; else D_mru_num[index] = 0;
         }
-        if (ID) I_mru_num[index]++;
-        else D_mru_num[index]++;
+        if (ID && !Cache(index, set, 2, ID)) I_mru_num[index]++;
+        else if (!ID && !Cache(index, set, 2, ID)) D_mru_num[index]++;
         setCache(index, set, 2, 1, ID);
     }
 }
@@ -155,6 +156,7 @@ void goCMP(int VA, int ID) {
             return;
         }
     }
+
     if (ID) ICm++; else DCm++;
     if (cv_num == asso) {
         for (i = 0; i < asso; ++i) {

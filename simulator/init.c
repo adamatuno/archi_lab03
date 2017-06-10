@@ -42,22 +42,22 @@ void init(int argc, char **argv) {
     idisk = ddisk = icache = dcache = itlb = dtlb = 0;
 
     switch(argc) {
-        case 11: D_cache_asso = atoi(argv[10]);
-        case 10: D_cache_bsize = atoi(argv[9]);
-        case 9: D_cache_tsize = atoi(argv[8]);
-        case 8: I_cache_asso = atoi(argv[7]);
-        case 7: I_cache_bsize = atoi(argv[6]);
-        case 6: I_cache_tsize = atoi(argv[5]);
-        case 5: D_page_size = atoi(argv[4]);
-        case 4: I_page_size = atoi(argv[3]);
-        case 3: D_mem_size = atoi(argv[2]);
-        case 2: I_mem_size = atoi(argv[1]);
+        case 11: D_cache_asso = atoi(argv[10]); // 1   4    4
+        case 10: D_cache_bsize = atoi(argv[9]); // 4   4    4
+        case 9: D_cache_tsize = atoi(argv[8]);  // 16  16   32
+        case 8: I_cache_asso = atoi(argv[7]);   // 4   4    8
+        case 7: I_cache_bsize = atoi(argv[6]);  // 4   4    4
+        case 6: I_cache_tsize = atoi(argv[5]);  // 16  16   64
+        case 5: D_page_size = atoi(argv[4]);    // 16  32   64
+        case 4: I_page_size = atoi(argv[3]);    // 8   32   128
+        case 3: D_mem_size = atoi(argv[2]);     // 32  256  1024
+        case 2: I_mem_size = atoi(argv[1]);     // 64  256  512
         default: break;
     }
 
     // cache
-    I_cache_index = I_cache_tsize/I_cache_bsize/I_cache_asso;
-    D_cache_index = D_cache_tsize/D_cache_bsize/D_cache_asso;
+    I_cache_index = I_cache_tsize/I_cache_bsize/I_cache_asso; // 1  1  2
+    D_cache_index = D_cache_tsize/D_cache_bsize/D_cache_asso; // 4  1  2
     for (i = 0; i < I_cache_index; ++i) {
         for (j = 0; j < I_cache_asso; ++j) {
             I_cache[i][j][0] = 0; //valid
@@ -75,8 +75,8 @@ void init(int argc, char **argv) {
         D_cv_num[i] = 0;
     }
     // PTE
-    I_PTE = 1024/I_page_size;
-    D_PTE = 1024/D_page_size;
+    I_PTE = 1024/I_page_size; // 128 32  8 
+    D_PTE = 1024/D_page_size; // 64  32  16
     for (i = 0; i < I_PTE; ++i) {
         I_PT[i][0] = 0; // valid
         I_PT[i][2] = 0; // LRU
@@ -86,8 +86,8 @@ void init(int argc, char **argv) {
         D_PT[i][2] = 0; // LRU
     }
     // TLB
-    I_TLB_size = I_PTE/4;
-    D_TLB_size = D_PTE/4;
+    I_TLB_size = I_PTE/4; // 32  8  2 
+    D_TLB_size = D_PTE/4; // 16  8  4
     for (i = 0; i < I_TLB_size; ++i) {
         I_TLB[i][0] = 0; // valid
         I_TLB[i][3] = 0; // LRU
@@ -97,6 +97,6 @@ void init(int argc, char **argv) {
         D_TLB[i][3] = 0; // LRU
     }
     // mem
-    I_mem_entry = I_mem_size/I_page_size;
-    D_mem_entry = D_mem_size/D_page_size;
+    I_mem_entry = I_mem_size/I_page_size; // 8  8  4
+    D_mem_entry = D_mem_size/D_page_size; // 2  8  16
 }

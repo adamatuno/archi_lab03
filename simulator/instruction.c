@@ -30,39 +30,51 @@ void Rti(unsigned int func, unsigned int s, unsigned int t, unsigned int d, unsi
     switch(func){
     case 0x20:///add
         r[d] = r[s] + r[t];
+        r[0] = 0;
         break;
     case 0x21:///addu
         r[d] = r[s] + r[t];
+        r[0] = 0;
         break;
     case 0x22:///sub
         r[d] = r[s] - r[t];
+        r[0] = 0;
         break;
     case 0x24://and
         r[d] = r[s] & r[t];
+        r[0] = 0;
         break;
     case 0x25://or
         r[d] = r[s] | r[t];
+        r[0] = 0;
         break;
     case 0x26://xor
         r[d] = r[s] ^ r[t];
+        r[0] = 0;
         break;
     case 0x27://nor
         r[d] = ~(r[s] | r[t]);
+        r[0] = 0;
         break;
     case 0x28://nand
         r[d] = ~(r[s] & r[t]);
+        r[0] = 0;
         break;
     case 0x2a://slt
         r[d] = r[s] < r[t];
+        r[0] = 0;
         break;
     case 0x00://sll
         r[d] = r[t] << C;
+        r[0] = 0;
         break;
     case 0x02://srl
         r[d] = (unsigned int)r[t] >> C;
+        r[0] = 0;
         break;
     case 0x03://sra
         r[d] = r[t] >> C;
+        r[0] = 0;
         break;
     case 0x08://jr
         PC = r[s] / 4;
@@ -84,6 +96,7 @@ void Rti(unsigned int func, unsigned int s, unsigned int t, unsigned int d, unsi
         break;
     case 0x10://mfhi
         r[d] = Hi;
+        r[0] = 0;
         break;
     case 0x12://mflo
         r[d] = Lo;
@@ -103,9 +116,11 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
     switch(op){
     case 0x08://addi
         r[t] = r[s] + C;
+        r[0] = 0;
         break;
     case 0x09://addiu
         r[t] = r[s] + C;
+        r[0] = 0;
         break;
     case 0x23://lw
         if(mem_out(r[s] + C, 3)) break;
@@ -115,6 +130,7 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
         c = D[r[s] + C + 2] & 0x000000ff;
         d = D[r[s] + C + 3] & 0x000000ff;
         r[t] = (a << 24) | (b << 16) | (c << 8) | d;
+        r[0] = 0;
         break;
     case 0x21://lh
         if(mem_out(r[s] + C, 1)) break;
@@ -123,6 +139,7 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
         b = D[r[s] + C + 1];
         if(a >> 7) r[t] = ((a << 8) | b) | 0xffff0000;
         else r[t] = ((a << 8) | b) & 0x0000ffff;
+        r[0] = 0;
         break;
     case 0x25://lhu
         if(mem_out(r[s] + C, 1)) break;
@@ -130,6 +147,7 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
         a = D[r[s] + C] & 0x000000ff;
         b = D[r[s] + C + 1] & 0x000000ff;
         r[t] = ((a << 8) | b) & 0x0000ffff;
+        r[0] = 0;
         break;
     case 0x20://lb
         if(mem_out(r[s] + C, 0)) break;
@@ -137,11 +155,13 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
         a = D[r[s] + C] & 0x000000ff;
         if(a >> 7) r[t] = a | 0xffffff00;
         else r[t] = a;
+        r[0] = 0;
         break;
     case 0x24://lbu
         if(mem_out(r[s] + C, 0)) break;
         goCMP(r[s] + C, 0);
         r[t] = D[r[s] + C] & 0x000000ff;
+        r[0] = 0;
         break;
     case 0x2b://sw
         if(mem_out(r[s] + C, 3)) break;
@@ -164,21 +184,26 @@ void Iti(unsigned int op, unsigned int s, unsigned int t, int C){
         break;
     case 0x0f:///lui
         r[t] = Cu << 16;
+        r[0] = 0;
         break;
     case 0x0c:///andi
         a = r[s];
         r[t] = a & Cu;
+        r[0] = 0;
         break;
     case 0x0d:///ori
         a = r[s];
         r[t] = r[s] | Cu;
+        r[0] = 0;
         break;
     case 0x0e:///nori
         a = r[s];
         r[t] = ~(a | Cu);
+        r[0] = 0;
         break;
     case 0x0a://slti
         r[t] = r[s] < C;
+        r[0] = 0;
         break;
     case 0x04://beq
         if(r[s] == r[t]) PC = PC + C;

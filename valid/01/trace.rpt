@@ -1,0 +1,710 @@
+1, lw   : Disk  ;  Disk 
+2, lw   : ITLB  ;  DTLB 
+3, lw   : ITLB  ;  DTLB 
+4, lw   : ITLB  ;  DTLB 
+5, lw   : ITLB  ;  DTLB 
+6, lw   : ITLB  ;  DTLB 
+7, addi : ITLB  ; 
+8, addu : ITLB  ; 
+9, addu : Disk  ; 
+10, addu : ITLB  ; 
+11, and  : ITLB  ; 
+12, or   : ITLB  ; 
+13, xor  : ITLB  ; 
+14, nor  : ITLB  ; 
+15, nand : ITLB  ; 
+16, slt  : ITLB  ; 
+17, slt  : Disk  ; 
+18, slt  : ITLB  ; 
+19, slt  : ITLB  ; 
+20, slt  : ITLB  ; 
+21, slt  : ITLB  ; 
+22, slt  : ITLB  ; 
+23, slt  : ITLB  ; 
+24, slt  : ITLB  ; 
+25, slt  : Disk  ; 
+26, slt  : ITLB  ; 
+27, slt  : ITLB  ; 
+28, sll  : ITLB  ; 
+29, srl  : ITLB  ; 
+30, sra  : ITLB  ; 
+31, multu: ITLB  ; 
+32, mfhi : ITLB  ; 
+33, multu: Disk  ; 
+34, mflo : ITLB  ; 
+35, addiu: ITLB  ; 
+36, addiu: ITLB  ; 
+37, addiu: ITLB  ; 
+38, addiu: ITLB  ; 
+39, addiu: ITLB  ; 
+40, addiu: ITLB  ; 
+41, addiu: Disk  ; 
+42, addiu: ITLB  ; 
+43, addi : ITLB  ; 
+44, addi : ITLB  ; 
+45, addi : ITLB  ; 
+46, lw   : ITLB  ;  DTLB 
+47, lh   : ITLB  ;  DCache  DTLB 
+48, lb   : ITLB  ;  DCache  DTLB 
+49, sw   : Disk  ;  Disk 
+50, sw   : ITLB  ;  DTLB 
+51, lw   : ITLB  ;  DCache  DTLB 
+52, lw   : ITLB  ;  DCache  DTLB 
+53, sh   : ITLB  ;  DCache  DTLB 
+54, sh   : ITLB  ;  DCache  DTLB 
+55, lh   : ITLB  ;  DCache  DTLB 
+56, lh   : ITLB  ;  DCache  DTLB 
+57, sb   : Disk  ;  DCache  DTLB 
+58, sb   : ITLB  ;  DCache  DTLB 
+59, lb   : ITLB  ;  DCache  DTLB 
+60, lb   : ITLB  ;  DCache  DTLB 
+61, lh   : ITLB  ;  DCache  DTLB 
+62, lh   : ITLB  ;  DCache  DTLB 
+63, lh   : ITLB  ;  DTLB 
+64, lh   : ITLB  ;  DCache  DTLB 
+65, lhu  : Disk  ;  DCache  DTLB 
+66, lhu  : ITLB  ;  DCache  DTLB 
+67, lhu  : ITLB  ;  DCache  DTLB 
+68, lhu  : ITLB  ;  DCache  DTLB 
+69, lb   : ITLB  ;  DCache  DTLB 
+70, lb   : ITLB  ;  DCache  DTLB 
+71, lb   : ITLB  ;  DCache  DTLB 
+72, lb   : ITLB  ;  DCache  DTLB 
+73, lbu  : Disk  ;  DCache  DTLB 
+74, lbu  : ITLB  ;  DCache  DTLB 
+75, lbu  : ITLB  ;  DCache  DTLB 
+76, lbu  : ITLB  ;  DCache  DTLB 
+77, lui  : ITLB  ; 
+78, lui  : ITLB  ; 
+79, andi : ITLB  ; 
+80, ori  : ITLB  ; 
+81, nori : Disk  ; 
+82, slti : ITLB  ; 
+83, slti : ITLB  ; 
+84, slti : ITLB  ; 
+85, slti : ITLB  ; 
+86, slti : ITLB  ; 
+87, slti : ITLB  ; 
+88, slti : ITLB  ; 
+89, slti : Disk  ; 
+90, slti : ITLB  ; 
+91, slti : ITLB  ; 
+92, slti : ITLB  ; 
+93, slti : ITLB  ; 
+94, slti : ITLB  ; 
+95, slti : ITLB  ; 
+96, slti : ITLB  ; 
+97, slti : Disk  ; 
+98, addi : ITLB  ; 
+99, addi : ITLB  ; 
+100, bne  : ITLB  ; 
+101, addi : ICache  ITLB  ; 
+102, bne  : ICache  ITLB  ; 
+103, addi : ICache  ITLB  ; 
+104, bne  : ICache  ITLB  ; 
+105, addi : ITLB  ; 
+106, addi : ITLB  ; 
+107, beq  : ITLB  ; 
+108, addi : Disk  ; 
+109, addi : ITLB  ; 
+110, beq  : ITLB  ; 
+111, addi : ITLB  ; 
+112, addi : ITLB  ; 
+113, addi : ITLB  ; 
+114, bne  : ITLB  ; 
+115, addi : Disk  ; 
+116, addi : ITLB  ; 
+117, bne  : ITLB  ; 
+118, addi : ITLB  ; 
+119, addi : ITLB  ; 
+120, bgtz : ITLB  ; 
+121, addi : ITLB  ; 
+122, bgtz : Disk  ; 
+123, addi : ITLB  ; 
+124, addi : ITLB  ; 
+125, bgtz : ITLB  ; 
+126, addi : ITLB  ; 
+127, addi : ITLB  ; 
+128, beq  : ITLB  ; 
+129, j    : ITLB  ; 
+130, addu : Disk  ; 
+131, addu : Disk  ; 
+132, addu : ITLB  ; 
+133, and  : ITLB  ; 
+134, or   : ITLB  ; 
+135, xor  : ITLB  ; 
+136, nor  : ITLB  ; 
+137, nand : ITLB  ; 
+138, slt  : ITLB  ; 
+139, slt  : Disk  ; 
+140, slt  : ITLB  ; 
+141, slt  : ITLB  ; 
+142, slt  : ITLB  ; 
+143, slt  : ITLB  ; 
+144, slt  : ITLB  ; 
+145, slt  : ITLB  ; 
+146, slt  : ITLB  ; 
+147, slt  : Disk  ; 
+148, slt  : ITLB  ; 
+149, slt  : ITLB  ; 
+150, sll  : ITLB  ; 
+151, srl  : ITLB  ; 
+152, sra  : ITLB  ; 
+153, multu: ITLB  ; 
+154, mfhi : ITLB  ; 
+155, multu: Disk  ; 
+156, mflo : ITLB  ; 
+157, addiu: ITLB  ; 
+158, addiu: ITLB  ; 
+159, addiu: ITLB  ; 
+160, addiu: ITLB  ; 
+161, addiu: ITLB  ; 
+162, addiu: ITLB  ; 
+163, addiu: Disk  ; 
+164, addiu: ITLB  ; 
+165, addi : ITLB  ; 
+166, addi : ITLB  ; 
+167, addi : ITLB  ; 
+168, lw   : ITLB  ;  DCache  DTLB 
+169, lh   : ITLB  ;  DCache  DTLB 
+170, lb   : ITLB  ;  DCache  DTLB 
+171, sw   : Disk  ;  DCache  DTLB 
+172, sw   : ITLB  ;  DCache  DTLB 
+173, lw   : ITLB  ;  DCache  DTLB 
+174, lw   : ITLB  ;  DCache  DTLB 
+175, sh   : ITLB  ;  DCache  DTLB 
+176, sh   : ITLB  ;  DCache  DTLB 
+177, lh   : ITLB  ;  DCache  DTLB 
+178, lh   : ITLB  ;  DCache  DTLB 
+179, sb   : Disk  ;  DCache  DTLB 
+180, sb   : ITLB  ;  DCache  DTLB 
+181, lb   : ITLB  ;  DCache  DTLB 
+182, lb   : ITLB  ;  DCache  DTLB 
+183, lh   : ITLB  ;  DCache  DTLB 
+184, lh   : ITLB  ;  DCache  DTLB 
+185, lh   : ITLB  ;  DCache  DTLB 
+186, lh   : ITLB  ;  DCache  DTLB 
+187, lhu  : Disk  ;  DCache  DTLB 
+188, lhu  : ITLB  ;  DCache  DTLB 
+189, lhu  : ITLB  ;  DCache  DTLB 
+190, lhu  : ITLB  ;  DCache  DTLB 
+191, lb   : ITLB  ;  DCache  DTLB 
+192, lb   : ITLB  ;  DCache  DTLB 
+193, lb   : ITLB  ;  DCache  DTLB 
+194, lb   : ITLB  ;  DCache  DTLB 
+195, lbu  : Disk  ;  DCache  DTLB 
+196, lbu  : ITLB  ;  DCache  DTLB 
+197, lbu  : ITLB  ;  DCache  DTLB 
+198, lbu  : ITLB  ;  DCache  DTLB 
+199, lui  : ITLB  ; 
+200, lui  : ITLB  ; 
+201, andi : ITLB  ; 
+202, ori  : ITLB  ; 
+203, nori : Disk  ; 
+204, slti : ITLB  ; 
+205, slti : ITLB  ; 
+206, slti : ITLB  ; 
+207, slti : ITLB  ; 
+208, slti : ITLB  ; 
+209, slti : ITLB  ; 
+210, slti : ITLB  ; 
+211, slti : Disk  ; 
+212, slti : ITLB  ; 
+213, slti : ITLB  ; 
+214, slti : ITLB  ; 
+215, slti : ITLB  ; 
+216, slti : ITLB  ; 
+217, slti : ITLB  ; 
+218, slti : ITLB  ; 
+219, slti : Disk  ; 
+220, addi : ITLB  ; 
+221, addi : ITLB  ; 
+222, bne  : ITLB  ; 
+223, addi : ICache  ITLB  ; 
+224, bne  : ICache  ITLB  ; 
+225, addi : ICache  ITLB  ; 
+226, bne  : ICache  ITLB  ; 
+227, addi : ITLB  ; 
+228, addi : ITLB  ; 
+229, beq  : ITLB  ; 
+230, addi : Disk  ; 
+231, addi : ITLB  ; 
+232, beq  : ITLB  ; 
+233, addi : ITLB  ; 
+234, addi : ITLB  ; 
+235, addi : ITLB  ; 
+236, bne  : ITLB  ; 
+237, addi : Disk  ; 
+238, addi : ITLB  ; 
+239, bne  : ITLB  ; 
+240, addi : ITLB  ; 
+241, addi : ITLB  ; 
+242, bgtz : ITLB  ; 
+243, addi : ITLB  ; 
+244, bgtz : Disk  ; 
+245, addi : ITLB  ; 
+246, addi : ITLB  ; 
+247, bgtz : ITLB  ; 
+248, addi : ITLB  ; 
+249, addi : ITLB  ; 
+250, beq  : ITLB  ; 
+251, j    : ITLB  ; 
+252, addu : Disk  ; 
+253, addu : Disk  ; 
+254, addu : ITLB  ; 
+255, and  : ITLB  ; 
+256, or   : ITLB  ; 
+257, xor  : ITLB  ; 
+258, nor  : ITLB  ; 
+259, nand : ITLB  ; 
+260, slt  : ITLB  ; 
+261, slt  : Disk  ; 
+262, slt  : ITLB  ; 
+263, slt  : ITLB  ; 
+264, slt  : ITLB  ; 
+265, slt  : ITLB  ; 
+266, slt  : ITLB  ; 
+267, slt  : ITLB  ; 
+268, slt  : ITLB  ; 
+269, slt  : Disk  ; 
+270, slt  : ITLB  ; 
+271, slt  : ITLB  ; 
+272, sll  : ITLB  ; 
+273, srl  : ITLB  ; 
+274, sra  : ITLB  ; 
+275, multu: ITLB  ; 
+276, mfhi : ITLB  ; 
+277, multu: Disk  ; 
+278, mflo : ITLB  ; 
+279, addiu: ITLB  ; 
+280, addiu: ITLB  ; 
+281, addiu: ITLB  ; 
+282, addiu: ITLB  ; 
+283, addiu: ITLB  ; 
+284, addiu: ITLB  ; 
+285, addiu: Disk  ; 
+286, addiu: ITLB  ; 
+287, addi : ITLB  ; 
+288, addi : ITLB  ; 
+289, addi : ITLB  ; 
+290, lw   : ITLB  ;  DCache  DTLB 
+291, lh   : ITLB  ;  DCache  DTLB 
+292, lb   : ITLB  ;  DCache  DTLB 
+293, sw   : Disk  ;  DCache  DTLB 
+294, sw   : ITLB  ;  DCache  DTLB 
+295, lw   : ITLB  ;  DCache  DTLB 
+296, lw   : ITLB  ;  DCache  DTLB 
+297, sh   : ITLB  ;  DCache  DTLB 
+298, sh   : ITLB  ;  DCache  DTLB 
+299, lh   : ITLB  ;  DCache  DTLB 
+300, lh   : ITLB  ;  DCache  DTLB 
+301, sb   : Disk  ;  DCache  DTLB 
+302, sb   : ITLB  ;  DCache  DTLB 
+303, lb   : ITLB  ;  DCache  DTLB 
+304, lb   : ITLB  ;  DCache  DTLB 
+305, lh   : ITLB  ;  DCache  DTLB 
+306, lh   : ITLB  ;  DCache  DTLB 
+307, lh   : ITLB  ;  DCache  DTLB 
+308, lh   : ITLB  ;  DCache  DTLB 
+309, lhu  : Disk  ;  DCache  DTLB 
+310, lhu  : ITLB  ;  DCache  DTLB 
+311, lhu  : ITLB  ;  DCache  DTLB 
+312, lhu  : ITLB  ;  DCache  DTLB 
+313, lb   : ITLB  ;  DCache  DTLB 
+314, lb   : ITLB  ;  DCache  DTLB 
+315, lb   : ITLB  ;  DCache  DTLB 
+316, lb   : ITLB  ;  DCache  DTLB 
+317, lbu  : Disk  ;  DCache  DTLB 
+318, lbu  : ITLB  ;  DCache  DTLB 
+319, lbu  : ITLB  ;  DCache  DTLB 
+320, lbu  : ITLB  ;  DCache  DTLB 
+321, lui  : ITLB  ; 
+322, lui  : ITLB  ; 
+323, andi : ITLB  ; 
+324, ori  : ITLB  ; 
+325, nori : Disk  ; 
+326, slti : ITLB  ; 
+327, slti : ITLB  ; 
+328, slti : ITLB  ; 
+329, slti : ITLB  ; 
+330, slti : ITLB  ; 
+331, slti : ITLB  ; 
+332, slti : ITLB  ; 
+333, slti : Disk  ; 
+334, slti : ITLB  ; 
+335, slti : ITLB  ; 
+336, slti : ITLB  ; 
+337, slti : ITLB  ; 
+338, slti : ITLB  ; 
+339, slti : ITLB  ; 
+340, slti : ITLB  ; 
+341, slti : Disk  ; 
+342, addi : ITLB  ; 
+343, addi : ITLB  ; 
+344, bne  : ITLB  ; 
+345, addi : ICache  ITLB  ; 
+346, bne  : ICache  ITLB  ; 
+347, addi : ICache  ITLB  ; 
+348, bne  : ICache  ITLB  ; 
+349, addi : ITLB  ; 
+350, addi : ITLB  ; 
+351, beq  : ITLB  ; 
+352, addi : Disk  ; 
+353, addi : ITLB  ; 
+354, beq  : ITLB  ; 
+355, addi : ITLB  ; 
+356, addi : ITLB  ; 
+357, addi : ITLB  ; 
+358, bne  : ITLB  ; 
+359, addi : Disk  ; 
+360, addi : ITLB  ; 
+361, bne  : ITLB  ; 
+362, addi : ITLB  ; 
+363, addi : ITLB  ; 
+364, bgtz : ITLB  ; 
+365, addi : ITLB  ; 
+366, bgtz : Disk  ; 
+367, addi : ITLB  ; 
+368, addi : ITLB  ; 
+369, bgtz : ITLB  ; 
+370, addi : ITLB  ; 
+371, addi : ITLB  ; 
+372, beq  : ITLB  ; 
+373, j    : ITLB  ; 
+374, addu : Disk  ; 
+375, addu : Disk  ; 
+376, addu : ITLB  ; 
+377, and  : ITLB  ; 
+378, or   : ITLB  ; 
+379, xor  : ITLB  ; 
+380, nor  : ITLB  ; 
+381, nand : ITLB  ; 
+382, slt  : ITLB  ; 
+383, slt  : Disk  ; 
+384, slt  : ITLB  ; 
+385, slt  : ITLB  ; 
+386, slt  : ITLB  ; 
+387, slt  : ITLB  ; 
+388, slt  : ITLB  ; 
+389, slt  : ITLB  ; 
+390, slt  : ITLB  ; 
+391, slt  : Disk  ; 
+392, slt  : ITLB  ; 
+393, slt  : ITLB  ; 
+394, sll  : ITLB  ; 
+395, srl  : ITLB  ; 
+396, sra  : ITLB  ; 
+397, multu: ITLB  ; 
+398, mfhi : ITLB  ; 
+399, multu: Disk  ; 
+400, mflo : ITLB  ; 
+401, addiu: ITLB  ; 
+402, addiu: ITLB  ; 
+403, addiu: ITLB  ; 
+404, addiu: ITLB  ; 
+405, addiu: ITLB  ; 
+406, addiu: ITLB  ; 
+407, addiu: Disk  ; 
+408, addiu: ITLB  ; 
+409, addi : ITLB  ; 
+410, addi : ITLB  ; 
+411, addi : ITLB  ; 
+412, lw   : ITLB  ;  DCache  DTLB 
+413, lh   : ITLB  ;  DCache  DTLB 
+414, lb   : ITLB  ;  DCache  DTLB 
+415, sw   : Disk  ;  DCache  DTLB 
+416, sw   : ITLB  ;  DCache  DTLB 
+417, lw   : ITLB  ;  DCache  DTLB 
+418, lw   : ITLB  ;  DCache  DTLB 
+419, sh   : ITLB  ;  DCache  DTLB 
+420, sh   : ITLB  ;  DCache  DTLB 
+421, lh   : ITLB  ;  DCache  DTLB 
+422, lh   : ITLB  ;  DCache  DTLB 
+423, sb   : Disk  ;  DCache  DTLB 
+424, sb   : ITLB  ;  DCache  DTLB 
+425, lb   : ITLB  ;  DCache  DTLB 
+426, lb   : ITLB  ;  DCache  DTLB 
+427, lh   : ITLB  ;  DCache  DTLB 
+428, lh   : ITLB  ;  DCache  DTLB 
+429, lh   : ITLB  ;  DCache  DTLB 
+430, lh   : ITLB  ;  DCache  DTLB 
+431, lhu  : Disk  ;  DCache  DTLB 
+432, lhu  : ITLB  ;  DCache  DTLB 
+433, lhu  : ITLB  ;  DCache  DTLB 
+434, lhu  : ITLB  ;  DCache  DTLB 
+435, lb   : ITLB  ;  DCache  DTLB 
+436, lb   : ITLB  ;  DCache  DTLB 
+437, lb   : ITLB  ;  DCache  DTLB 
+438, lb   : ITLB  ;  DCache  DTLB 
+439, lbu  : Disk  ;  DCache  DTLB 
+440, lbu  : ITLB  ;  DCache  DTLB 
+441, lbu  : ITLB  ;  DCache  DTLB 
+442, lbu  : ITLB  ;  DCache  DTLB 
+443, lui  : ITLB  ; 
+444, lui  : ITLB  ; 
+445, andi : ITLB  ; 
+446, ori  : ITLB  ; 
+447, nori : Disk  ; 
+448, slti : ITLB  ; 
+449, slti : ITLB  ; 
+450, slti : ITLB  ; 
+451, slti : ITLB  ; 
+452, slti : ITLB  ; 
+453, slti : ITLB  ; 
+454, slti : ITLB  ; 
+455, slti : Disk  ; 
+456, slti : ITLB  ; 
+457, slti : ITLB  ; 
+458, slti : ITLB  ; 
+459, slti : ITLB  ; 
+460, slti : ITLB  ; 
+461, slti : ITLB  ; 
+462, slti : ITLB  ; 
+463, slti : Disk  ; 
+464, addi : ITLB  ; 
+465, addi : ITLB  ; 
+466, bne  : ITLB  ; 
+467, addi : ICache  ITLB  ; 
+468, bne  : ICache  ITLB  ; 
+469, addi : ICache  ITLB  ; 
+470, bne  : ICache  ITLB  ; 
+471, addi : ITLB  ; 
+472, addi : ITLB  ; 
+473, beq  : ITLB  ; 
+474, addi : Disk  ; 
+475, addi : ITLB  ; 
+476, beq  : ITLB  ; 
+477, addi : ITLB  ; 
+478, addi : ITLB  ; 
+479, addi : ITLB  ; 
+480, bne  : ITLB  ; 
+481, addi : Disk  ; 
+482, addi : ITLB  ; 
+483, bne  : ITLB  ; 
+484, addi : ITLB  ; 
+485, addi : ITLB  ; 
+486, bgtz : ITLB  ; 
+487, addi : ITLB  ; 
+488, bgtz : Disk  ; 
+489, addi : ITLB  ; 
+490, addi : ITLB  ; 
+491, bgtz : ITLB  ; 
+492, addi : ITLB  ; 
+493, addi : ITLB  ; 
+494, beq  : ITLB  ; 
+495, j    : ITLB  ; 
+496, addu : Disk  ; 
+497, addu : Disk  ; 
+498, addu : ITLB  ; 
+499, and  : ITLB  ; 
+500, or   : ITLB  ; 
+501, xor  : ITLB  ; 
+502, nor  : ITLB  ; 
+503, nand : ITLB  ; 
+504, slt  : ITLB  ; 
+505, slt  : Disk  ; 
+506, slt  : ITLB  ; 
+507, slt  : ITLB  ; 
+508, slt  : ITLB  ; 
+509, slt  : ITLB  ; 
+510, slt  : ITLB  ; 
+511, slt  : ITLB  ; 
+512, slt  : ITLB  ; 
+513, slt  : Disk  ; 
+514, slt  : ITLB  ; 
+515, slt  : ITLB  ; 
+516, sll  : ITLB  ; 
+517, srl  : ITLB  ; 
+518, sra  : ITLB  ; 
+519, multu: ITLB  ; 
+520, mfhi : ITLB  ; 
+521, multu: Disk  ; 
+522, mflo : ITLB  ; 
+523, addiu: ITLB  ; 
+524, addiu: ITLB  ; 
+525, addiu: ITLB  ; 
+526, addiu: ITLB  ; 
+527, addiu: ITLB  ; 
+528, addiu: ITLB  ; 
+529, addiu: Disk  ; 
+530, addiu: ITLB  ; 
+531, addi : ITLB  ; 
+532, addi : ITLB  ; 
+533, addi : ITLB  ; 
+534, lw   : ITLB  ;  DCache  DTLB 
+535, lh   : ITLB  ;  DCache  DTLB 
+536, lb   : ITLB  ;  DCache  DTLB 
+537, sw   : Disk  ;  DCache  DTLB 
+538, sw   : ITLB  ;  DCache  DTLB 
+539, lw   : ITLB  ;  DCache  DTLB 
+540, lw   : ITLB  ;  DCache  DTLB 
+541, sh   : ITLB  ;  DCache  DTLB 
+542, sh   : ITLB  ;  DCache  DTLB 
+543, lh   : ITLB  ;  DCache  DTLB 
+544, lh   : ITLB  ;  DCache  DTLB 
+545, sb   : Disk  ;  DCache  DTLB 
+546, sb   : ITLB  ;  DCache  DTLB 
+547, lb   : ITLB  ;  DCache  DTLB 
+548, lb   : ITLB  ;  DCache  DTLB 
+549, lh   : ITLB  ;  DCache  DTLB 
+550, lh   : ITLB  ;  DCache  DTLB 
+551, lh   : ITLB  ;  DCache  DTLB 
+552, lh   : ITLB  ;  DCache  DTLB 
+553, lhu  : Disk  ;  DCache  DTLB 
+554, lhu  : ITLB  ;  DCache  DTLB 
+555, lhu  : ITLB  ;  DCache  DTLB 
+556, lhu  : ITLB  ;  DCache  DTLB 
+557, lb   : ITLB  ;  DCache  DTLB 
+558, lb   : ITLB  ;  DCache  DTLB 
+559, lb   : ITLB  ;  DCache  DTLB 
+560, lb   : ITLB  ;  DCache  DTLB 
+561, lbu  : Disk  ;  DCache  DTLB 
+562, lbu  : ITLB  ;  DCache  DTLB 
+563, lbu  : ITLB  ;  DCache  DTLB 
+564, lbu  : ITLB  ;  DCache  DTLB 
+565, lui  : ITLB  ; 
+566, lui  : ITLB  ; 
+567, andi : ITLB  ; 
+568, ori  : ITLB  ; 
+569, nori : Disk  ; 
+570, slti : ITLB  ; 
+571, slti : ITLB  ; 
+572, slti : ITLB  ; 
+573, slti : ITLB  ; 
+574, slti : ITLB  ; 
+575, slti : ITLB  ; 
+576, slti : ITLB  ; 
+577, slti : Disk  ; 
+578, slti : ITLB  ; 
+579, slti : ITLB  ; 
+580, slti : ITLB  ; 
+581, slti : ITLB  ; 
+582, slti : ITLB  ; 
+583, slti : ITLB  ; 
+584, slti : ITLB  ; 
+585, slti : Disk  ; 
+586, addi : ITLB  ; 
+587, addi : ITLB  ; 
+588, bne  : ITLB  ; 
+589, addi : ICache  ITLB  ; 
+590, bne  : ICache  ITLB  ; 
+591, addi : ICache  ITLB  ; 
+592, bne  : ICache  ITLB  ; 
+593, addi : ITLB  ; 
+594, addi : ITLB  ; 
+595, beq  : ITLB  ; 
+596, addi : Disk  ; 
+597, addi : ITLB  ; 
+598, beq  : ITLB  ; 
+599, addi : ITLB  ; 
+600, addi : ITLB  ; 
+601, addi : ITLB  ; 
+602, bne  : ITLB  ; 
+603, addi : Disk  ; 
+604, addi : ITLB  ; 
+605, bne  : ITLB  ; 
+606, addi : ITLB  ; 
+607, addi : ITLB  ; 
+608, bgtz : ITLB  ; 
+609, addi : ITLB  ; 
+610, bgtz : Disk  ; 
+611, addi : ITLB  ; 
+612, addi : ITLB  ; 
+613, bgtz : ITLB  ; 
+614, addi : ITLB  ; 
+615, addi : ITLB  ; 
+616, beq  : ITLB  ; 
+617, jal  : Disk  ; 
+618, add  : ITLB  ; 
+619, add  : Disk  ; 
+620, add  : ITLB  ; 
+621, add  : ITLB  ; 
+622, add  : ITLB  ; 
+623, add  : ITLB  ; 
+624, add  : ITLB  ; 
+625, add  : ITLB  ; 
+626, add  : ITLB  ; 
+627, add  : Disk  ; 
+628, sub  : ITLB  ; 
+629, sub  : ITLB  ; 
+630, sub  : ITLB  ; 
+631, sub  : ITLB  ; 
+632, sub  : ITLB  ; 
+633, sub  : ITLB  ; 
+634, sub  : ITLB  ; 
+635, sub  : Disk  ; 
+636, sub  : ITLB  ; 
+637, sub  : ITLB  ; 
+638, sub  : ITLB  ; 
+639, sub  : ITLB  ; 
+640, sub  : ITLB  ; 
+641, sub  : ITLB  ; 
+642, sub  : ITLB  ; 
+643, sub  : Disk  ; 
+644, sub  : ITLB  ; 
+645, sub  : ITLB  ; 
+646, sub  : ITLB  ; 
+647, sub  : ITLB  ; 
+648, mult : ITLB  ; 
+649, mult : ITLB  ; 
+650, mult : ITLB  ; 
+651, mult : Disk  ; 
+652, mult : ITLB  ; 
+653, mult : ITLB  ; 
+654, mult : ITLB  ; 
+655, mult : ITLB  ; 
+656, mult : ITLB  ; 
+657, mult : ITLB  ; 
+658, addi : ITLB  ; 
+659, addi : Disk  ; 
+660, addi : ITLB  ; 
+661, addi : ITLB  ; 
+662, addi : ITLB  ; 
+663, addi : ITLB  ; 
+664, addi : ITLB  ; 
+665, addi : ITLB  ; 
+666, addi : ITLB  ; 
+667, addi : Disk  ; 
+668, addi : ITLB  ; 
+669, addi : ITLB  ; 
+670, addi : ITLB  ; 
+671, addi : ITLB  ; 
+672, addi : ITLB  ; 
+673, addi : ITLB  ; 
+674, jr   : ITLB  ; 
+675, jal  : ITLB  ; 
+676, add  : Disk  ; 
+677, add  : ITLB  ; 
+678, addu : ITLB  ; 
+679, sub  : ITLB  ; 
+680, sub  : ITLB  ; 
+681, and  : ITLB  ; 
+682, or   : ITLB  ; 
+683, xor  : ITLB  ; 
+684, nor  : Disk  ; 
+685, nand : ITLB  ; 
+686, slt  : ITLB  ; 
+687, sll  : ITLB  ; 
+688, srl  : ITLB  ; 
+689, sra  : ITLB  ; 
+690, sll  : ITLB  ; 
+691, mult : ITLB  ; 
+692, mfhi : Disk  ; 
+693, mflo : ITLB  ; 
+694, mult : ITLB  ; 
+695, mfhi : ITLB  ; 
+696, mflo : ITLB  ; 
+697, addi : ITLB  ; 
+698, addiu: ITLB  ; 
+699, lw   : ITLB  ;  DCache  DTLB 
+700, lh   : Disk  ;  DCache  DTLB 
+701, lhu  : ITLB  ;  DCache  DTLB 
+702, lb   : ITLB  ;  DCache  DTLB 
+703, lbu  : ITLB  ;  DCache  DTLB 
+704, lui  : ITLB  ; 
+705, andi : ITLB  ; 
+706, ori  : ITLB  ; 
+707, nori : ITLB  ; 
+708, slti : Disk  ; 
+709, jr   : ITLB  ; 
+710, halt : Disk  ; 

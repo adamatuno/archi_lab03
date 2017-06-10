@@ -34,12 +34,12 @@ void trace(unsigned int code) {
     printfMIPS(code);
     fprintf(tr, ": ");
     if (idisk) fprintf(tr, "Disk ");
+    if (icache) fprintf(tr, "ICache  ");
     if (itlb) fprintf(tr, "ITLB ");
-    if (icache) fprintf(tr, " ICache ");
     fprintf(tr, " ; ");
     if (ddisk) fprintf(tr, " Disk ");
-    if (dtlb) fprintf(tr, " DTLB ");
     if (dcache) fprintf(tr, " DCache ");
+    if (dtlb) fprintf(tr, " DTLB ");
     fprintf(tr, "\n");
     idisk = ddisk = icache = dcache = itlb = dtlb = 0;
 }
@@ -85,8 +85,8 @@ void printfMIPS(unsigned int code) {
                 fprintf(tr, "slt  ");
                 break;
             case 0x00://sll or nop
-                if(get_rt(code) == 0 && get_rd(code) == 0 && get_sha(code) == 0) fprintf(tr, "nop  ");//nop
-                else fprintf(tr, "sll  "); // sll
+                //if(get_rt(code) == 0 && get_rd(code) == 0 && get_sha(code) == 0) fprintf(tr, "nop  ");//nop
+                fprintf(tr, "sll  "); // sll
                 break;
             case 0x02://srl
                 fprintf(tr, "srl  ");
